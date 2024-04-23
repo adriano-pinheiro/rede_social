@@ -2,7 +2,6 @@ package br.com.fiap.exercicio.api.rede_social.controller;
 
 import br.com.fiap.exercicio.api.rede_social.dto.PostagemDTO;
 import br.com.fiap.exercicio.api.rede_social.service.PostagemService;
-import jakarta.persistence.Entity;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

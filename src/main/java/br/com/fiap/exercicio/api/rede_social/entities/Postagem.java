@@ -2,7 +2,6 @@ package br.com.fiap.exercicio.api.rede_social.entities;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
