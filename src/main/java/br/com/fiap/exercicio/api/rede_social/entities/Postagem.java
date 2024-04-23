@@ -12,21 +12,22 @@ public class Postagem implements ContratoPostagem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
+
     private String titulo;
     private String conteudo;
     private String tags;
-    @OneToOne
+    @ManyToOne
     private Usuario usuario;
 
     @OneToMany
-    private List<Curtida> curtidas = new ArrayList<>();
+    private List<Curtida> curtidas; // = new ArrayList<>();
     @OneToMany
-    private List<Comentario> comentarios = new ArrayList<>();
+    private List<Comentario> comentarios;// = new ArrayList<>();
 
     public Postagem() {}
 
-    public Postagem(long id, String titulo, String conteudo, String tags, Usuario usuario, List<Curtida> curtidas, List<Comentario> comentarios) {
+    public Postagem(Long id, String titulo, String conteudo, String tags, Usuario usuario, List<Curtida> curtidas, List<Comentario> comentarios) {
         this.id = id;
         this.titulo = titulo;
         this.conteudo = conteudo;

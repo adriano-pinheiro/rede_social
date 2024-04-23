@@ -7,14 +7,14 @@ import jakarta.persistence.*;
 public class Curtida {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
-    @OneToOne
+    @ManyToOne
     private Usuario usuario;
 
     public Curtida() {}
 
-    public Curtida(long id, Usuario usuario) {
+    public Curtida(Long id, Usuario usuario) {
         this.id = id;
         this.usuario = usuario;
     }

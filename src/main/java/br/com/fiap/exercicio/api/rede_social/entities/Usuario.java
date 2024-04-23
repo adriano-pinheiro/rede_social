@@ -8,15 +8,15 @@ import java.util.Objects;
 @Table(name="tb_usuario")
 public class Usuario {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String nome;
     private String email;
     private String senha;
 
     public Usuario(){}
 
-    public Usuario(long id, String nome, String email, String senha) {
+    public Usuario(Long id, String nome, String email, String senha) {
         this.id = id;
         this.nome = nome;
         this.email = email;

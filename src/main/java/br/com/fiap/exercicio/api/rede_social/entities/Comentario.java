@@ -7,15 +7,15 @@ import jakarta.persistence.*;
 public class Comentario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String comentario;
 
-    @OneToOne
+    @ManyToOne
     private Usuario usuario;
 
     public Comentario() {}
 
-    public Comentario(long id, String comentario, Usuario usuario) {
+    public Comentario(Long id, String comentario, Usuario usuario) {
         this.id = id;
         this.comentario = comentario;
         this.usuario = usuario;
